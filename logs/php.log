@@ -1,0 +1,4 @@
+[Thu Feb  1 12:06:42 2024] PHP 8.2.10 Development Server (http://0.0.0.0:8080) started
+[Thu Feb  1 12:06:45 2024] 127.0.0.1:41050 Accepted
+[Thu Feb  1 12:06:45 2024] 127.0.0.1:41050 [200]: GET /index.html
+[Thu Feb  1 12:06:45 2024] 127.0.0.1:41050 Closing
