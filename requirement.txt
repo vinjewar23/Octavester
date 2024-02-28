@@ -1,0 +1,9 @@
+requests
+bs4
+html5lib
+phonenumbers
+argparse
+urllib3
+colorama
+dns
+json
