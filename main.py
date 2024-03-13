@@ -1,13 +1,3 @@
-R = '\033[31m'  # red
-G = '\033[32m'  # green
-C = '\033[36m'  # cyan
-W = '\033[0m'   # white
-Y = '\033[33m'  # yellow
-B = '\033[34m'  #bright blue
-
-
-
-
 import os 
 import sys
 
@@ -85,8 +75,7 @@ elif(option == "5"):
 █                             Subdomain Finder                                █ 
 █                                                                             █
 └═════════════════════════════════════════════════════════════════════════════┘     \n \033[1;m""")
-    domain = input("Enter the domain name eg. example.com: ")
-    command = os.system("subfinder -d "+ domain)
+    command = os.system("python subdomain.py")
 
 
 elif(option == "6"):
