@@ -1,6 +1,11 @@
 import os 
 import sys
 
+#check if running as root
+if not os.geteuid() == 0:
+    sys.exit("""\033[1;91m\n[!] Octavester must be run as root. ¯\_(ツ)_/¯\n\033[1;m""")
+
+
 print("""
 
  / _ \  ___| |_ __ ___   _____  ___| |_ ___ _ __ 
@@ -10,8 +15,7 @@ print("""
 
 """)
 
-
-
+#functions
 print("\033[1;91m1. Mobile Number Information")
 print("2. Email Information")
 print("3. IP Geolocation")
@@ -105,11 +109,3 @@ elif(option == "8"):
 █                                                                             █
 └═════════════════════════════════════════════════════════════════════════════┘     \n \033[1;m""")
     command = os.system("python vigenere.py ")
-
-
-
-    
-
-
-
-
