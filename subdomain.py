@@ -1,25 +1,19 @@
-# importing library
 import requests
  
 # function for scanning subdomains
-def domain_scanner(domain_name,sub_domnames):
+def domain_scanner(domain_name,sub_domain_names):
     print('-----------Scanner Started-----------')
     print('----------Subdomains found:----------')
-     
-    # loop for getting URL's
-    for subdomain in sub_domnames:
+
+    for subdomain in sub_domain_names:
        
         # making url by putting subdomain one by one
         url = f"https://{subdomain}.{domain_name}"
          
         # using try catch block to avoid crash of
         # the program
-        try:
-           
-            # sending get request to the url
-            requests.get(url)
-             
-            # if after putting subdomain one by one url 
+        try:  
+            requests.get(url) 
             # is valid then printing the url
             print(f'[+] {url}')
              
@@ -34,7 +28,7 @@ def domain_scanner(domain_name,sub_domnames):
 if __name__ == '__main__':
    
     # inputting the domain name
-    dom_name = input("Enter the Domain Name:")
+    domain_name = input("Enter the Domain Name:")
     print('\n')
  
     # opening the subdomain text file
@@ -45,8 +39,6 @@ if __name__ == '__main__':
          
         # using splitlines() function storing the 
         # list of splitted strings
-        sub_dom = name.splitlines()
+        sub_domain = name.splitlines()
          
-    # calling the function for scanning the subdomains
-    # and getting the url
-    domain_scanner(dom_name,sub_dom)
+    domain_scanner(domain_name,sub_domain)
