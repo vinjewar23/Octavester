@@ -1,7 +1,8 @@
 import dns.resolver
 import sys
 
-domain=input('\033[32mEnter a domain name: ') 
+domain=input('\033[1;31mEnter a domain name: ')
+print('\033[1;36m') 
 
 # Finding A record 
 result = dns.resolver.resolve(domain, 'A') 
@@ -39,6 +40,6 @@ result = dns.resolver.resolve(domain, 'TXT')
 for val in result: 
     print('TXT Record : ', val.to_text())
 
-input("\n\033[31mPress Enter to exit\n\n\033[0m")
+input("\n\033[1;31mPress Enter to exit\n\n\033[0m")
 sys.exit()
 
