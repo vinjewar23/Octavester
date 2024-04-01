@@ -3,11 +3,11 @@ import requests
 import sys
 import json
 
-email = input("Enter the target mail address: ")
+email = input("\033[1;31mEnter the target mail address: ")
 response = requests.get(f'https://emailrep.io/{email}')
 response_json = json.loads(response.text)
 
-print('\033[33m\nTarget: ', response_json['email'])
+print('\033[1;36m\nTarget: ', response_json['email'])
 print('Suspicious: ', response_json['suspicious'])
 print('Has response_jsonutation: ', response_json['reputation'])
 print('Is blacklisted: ', response_json['details']['blacklisted'])
@@ -26,5 +26,5 @@ print('Primary Mail Exchanger: ', response_json['details']['primary_mx'])
 print('Spoofable: ', response_json['details']['spoofable'])
 
 
-input("\n\033[33mPress Enter to exit\n\n\033[0m")
+input("\n\033[1;31mPress Enter to exit\n\n\033[0m")
 sys.exit()
