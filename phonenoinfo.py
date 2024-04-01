@@ -11,7 +11,7 @@ from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
 
-InputNumber = str(input("\033[1;33mEnter mobile number: \033[1;33m"))
+InputNumber = str(input("\033[1;31mEnter mobile number: "))
 
 def formatNumber(InputNumber):
     return re.sub("(?:\+)?(?:[^[0-9]*)", "", InputNumber)
@@ -22,7 +22,7 @@ global internationalNumber
 global numberCountryCode
 global numberCountry
 
-print('\033[32m\nRunning local scan...')
+print('\033[1;36m\nRunning local scan...')
 
 FormattedPhoneNumber = "+" + formatNumber(InputNumber)
 
@@ -113,7 +113,7 @@ if data["line_type"] == 'landline':
 elif data["line_type"] == 'mobile':
     print(("This is most likely a mobile number, but it can still be a VoIP number."))
 
-input("\n\033[33mPress Enter to exit\n\n\033[0m")
+input("\n\033[1;31mPress Enter to exit\n\n\033[0m")
 sys.exit()
 
 
