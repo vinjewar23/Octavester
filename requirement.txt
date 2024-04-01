@@ -5,6 +5,5 @@ phonenumbers
 argparse
 urllib3
 colorama
-dns
 json
 nmap
