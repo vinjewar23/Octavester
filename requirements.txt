@@ -7,4 +7,4 @@ urllib3
 colorama
 json
 nmap
-dns
+dnspython
