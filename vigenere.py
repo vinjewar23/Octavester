@@ -29,10 +29,10 @@ def vigenere_decrypt(ciphertext, key):
     return plaintext
 
 if __name__ == "__main__":
-    plaintext = input("Enter the text: ")
+    plaintext = input("\033[1;31mEnter the text: ")
     key = input("Enter the key: ")
 
-    print("\nOptions:")
+    print("\033[1;36m\nOptions:")
     print("1. Encrypt")
     print("2. Decrypt")
 
@@ -46,12 +46,5 @@ if __name__ == "__main__":
     else:
         print("Invalid option")
     
-    input("\n\033[33mPress Enter to return to Main menu\n\n\033[0m")
+    input("\n\033[1;31mPress Enter to exit.\n\n\033[0m")
     sys.exit()
-
- 
-
-
-    
-
-    
